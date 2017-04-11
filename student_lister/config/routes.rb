@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
   get '/courses', to: 'courses#index', as: 'courses'
   get '/courses/something_else', to: 'courses#something_else'
+  get '/courses/new', to: 'courses#new', as: 'new_course'
+  get '/courses/:id', to: 'courses#show', as: 'course'
+  post '/courses', to: 'courses#create'
+  get '/courses/:id/edit', to: 'courses#edit', as: 'edit_course'
+  patch '/courses/:id', to: 'courses#update'
   #resources :courses, only: [:index]
 
   # The following is defined by resources

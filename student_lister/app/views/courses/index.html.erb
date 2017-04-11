@@ -3,7 +3,9 @@
 <ul>
   <% @courses.each do |course| %>
     <li>
-      <%= course.name %> - <%= course.description %>
+      <%= link_to(course.name, course) %> - <%= course.description %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to('Create a Course', new_course_path) %>
